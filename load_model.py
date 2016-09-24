@@ -13,3 +13,6 @@ testdata1 = np.array([[0,0],[0,1],[1,0],[1,1]], "float32")
 print model.predict(testdata1).round()
 print model.predict(testdata1)
 
+text_file = open("model_architecture.txt", "w")
+text_file.write(model.to_json())
+text_file.close()
