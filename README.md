@@ -2,6 +2,8 @@
 
 http://blog.thoughtram.io/machine-learning/2016/09/23/beginning-ml-with-keras-and-tensorflow.html
 
+https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py
+
 playing with keras 
 
 
