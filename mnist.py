@@ -18,7 +18,8 @@ from keras import backend as K
 
 batch_size = 128
 nb_classes = 10
-nb_epoch = 12
+nb_epoch = 0
+
 
 # input image dimensions
 img_rows, img_cols = 28, 28
@@ -45,6 +46,9 @@ X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 X_train /= 255
 X_test /= 255
+
+
+
 print('X_train shape:', X_train.shape)
 print(X_train.shape[0], 'train samples')
 print(X_test.shape[0], 'test samples')

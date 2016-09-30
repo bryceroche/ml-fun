@@ -19,10 +19,10 @@ model.compile(loss='mean_squared_error',
 
 model.fit(training_data, target_data, nb_epoch=500, verbose=2)
 
-print model.predict(training_data)
-
+print model.predict(training_data).round()
+print '..'
 
 testdata= np.array([[1,0],[0,1],[1,0],[1,1]], "float32")
-print model.predict(testdata)
+print model.predict(testdata).round()
 
 model.save('my_model.h5')
