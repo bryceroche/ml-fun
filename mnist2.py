@@ -8,6 +8,9 @@ from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Convolution2D, MaxPooling2D
 from keras.utils import np_utils
 from keras import backend as K
+import pydot
+import graphviz
+
 
 
 batch_size = 128 #
@@ -36,6 +39,7 @@ X_train /= 255
 X_test /= 255
 
 print('X_train shape:', X_train.shape)
+print('X_test shape:', X_test.shape)
 print(X_train.shape[0], 'train samples')
 print(X_test.shape[0], 'test samples')
 
@@ -73,3 +77,6 @@ print('Test accuracy:', score[1])
 
 #model.save('my_mnist_model.h5')
 
+
+from keras.utils.visualize_util import plot
+plot(model, to_file='model.png')
